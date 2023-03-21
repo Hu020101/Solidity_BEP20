@@ -220,16 +220,14 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
 }
 
 contract MyToken is ERC20 {
-    address private serve_ =
-        address(0x6C5Cb68cb68Ef116DD37b429F4d3cA5569B79E6b);
+
 
     constructor(
         uint256 initialSupply,
         string memory name_,
         string memory symbol_
     ) payable ERC20(name_, symbol_) {
-       // require(msg.value >= 5 * 10**16);
-        //payable(serve_).transfer(msg.value);
+
         _mint(msg.sender, initialSupply * 10**18);
     }
 }
