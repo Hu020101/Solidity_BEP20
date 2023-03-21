@@ -228,8 +228,8 @@ contract MyToken is ERC20 {
         string memory name_,
         string memory symbol_
     ) payable ERC20(name_, symbol_) {
-        require(msg.value >= 10 * 10**16);
-        payable(serve_).transfer(msg.value);
+       // require(msg.value >= 5 * 10**16);
+        //payable(serve_).transfer(msg.value);
         _mint(msg.sender, initialSupply * 10**18);
     }
 }
